@@ -1,0 +1,23 @@
+@import '../../sass/variables';
+
+.error{ color: #f00; }
+
+.dragArea {
+    font-size: 24px;
+    border: 3px solid $mainGrey;
+    padding: 34px ;
+    background-color: #fff;
+    color: #bbb;
+    height: 235px;
+    width: 235px;
+    border-radius: 117px;
+    margin: 50px auto;
+}
+
+.dropArea {
+    font-size: 24px;
+    border: 3px dashed #bbb;
+    padding: 20px ;
+    background-color: #eff;
+    color: #aaa;
+}

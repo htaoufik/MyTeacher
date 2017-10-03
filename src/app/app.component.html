@@ -2,7 +2,41 @@
 <div class="container-fluid" id="header">
   <div class="row">
     <div class="col-lg-2">
-      <img src="assets/images/logo-yeah.png">
+      <img src="assets/images/logo-yeah.png" class="logo">
+    </div>
+    <div class="col-lg-2 col-lg-offset-8">
+      <ul class="list-inline social-links">
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <h1>Registration</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <app-file-upload
+              projectId="100"
+              sectionId="107"
+              maxFiles="4"
+              maxSize="2"
+              fileExt="JPG, GIF, PNG"
+              (uploadStatus)="refreshImages($event)" >
+      </app-file-upload>
+      <p class="text-center te"><i class="fa fa-upload"></i> Upload your picture</p>
+      <!--<div class="well">
+        <img *ngFor="let img of images"
+             [src]="'http://localhost:33699' + img.thumbPath"
+             class="img-thumbnail"
+             alt="">
+      </div>-->
     </div>
   </div>
 </div>

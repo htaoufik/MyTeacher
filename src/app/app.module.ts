@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import {FileService} from '../services/file.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FileUploadComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
-  providers: [],
+  providers: [FileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
