@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <h1>Registration</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <app-file-upload
+              projectId="100"
+              sectionId="107"
+              maxFiles="4"
+              maxSize="2"
+              fileExt="JPG, GIF, PNG"
+              (uploadStatus)="refreshImages($event)" >
+      </app-file-upload>
+      <p class="text-center text-upload"><i class="fa fa-upload"></i> Upload your picture</p>
+      <app-registration-form>
+
+      </app-registration-form>
+    </div>
+  </div>
+</div>
