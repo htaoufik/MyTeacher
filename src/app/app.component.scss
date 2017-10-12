@@ -1,16 +1,42 @@
 @import '../sass/variables';
+@import '../sass/mixins';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  background-color: $mainGrey;
+}
 
 #header {
   height:84px;
   background-color: $mainGrey;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   .logo {
     line-height: 84px;
     margin-top: 13px;
   }
-  .social-links li a {
+}
+
+h1 {
+  font-family: $gloria;
+  font-size: 60px;
+  margin-top: 100px;
+  color: $mainGrey;
+}
+
+#footer {
+  height:84px;
+  background-color: $mainGrey;
+  .logo {
+    line-height: 84px;
+    margin-top: 13px;
+  }
+}
+
+.social-links {
+  margin-bottom: 0;
+  li a {
     color: #ffffff;
     font-size: 32px;
     line-height: 84px;
@@ -18,18 +44,9 @@
   }
 }
 
-h1 {
-  font-family: 'Gloria Hallelujah', Arial, sans-serif;
-  font-size: 60px;
-  margin-top: 100px;
-  color: $mainGrey;
-}
-
-.profile-picture .fa {
-  font-size: 150px;
-  color: $mainGrey;
-}
-
-.profile-picture {
-  height: 200px;
+.text-copyright {
+  @include open-sans(500);
+  color: #ffffff;
+  line-height: 84px;
+  margin-bottom: 0;
 }

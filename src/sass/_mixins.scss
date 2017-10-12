@@ -1,0 +1,6 @@
+@import './variables';
+
+@mixin open-sans($weight) {
+  font-family: $openSans;
+  font-weight: $weight;
+}

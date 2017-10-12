@@ -1,6 +1,22 @@
 @import '../../sass/variables';
+@import '../../sass/mixins';
 
 .error{ color: #f00; }
+
+.profile-picture .fa {
+    font-size: 150px;
+    color: $mainGrey;
+}
+
+.profile-picture {
+    height: 200px;
+}
+
+.text-upload {
+    @include open-sans(300);
+    color: $mainGrey;
+    font-weight: 300;
+}
 
 .dragArea {
     font-size: 24px;
