@@ -8,53 +8,83 @@ import {FileService} from '../../services/file.service';
 })
 
 export class FileUploadComponent implements OnInit {
-  errors: Array<string> = [];
-  dragAreaClass = 'dragArea';
-  @Input() projectId = 0;
-  @Input() sectionId = 0;
-  @Input() fileExt = 'JPG, GIF, PNG';
-  @Input() maxFiles = 5;
-  @Input() maxSize = 5;
-  @Output() uploadStatus = new EventEmitter();
 
-  constructor(private fileService: FileService) { }
+    /**
+     * This array stores the errors
+     *
+     * @type {Array}
+     */
+    errors: Array<string> = [];
 
-  ngOnInit() { }
+    /**
+     * This class will be added to the drop zone
+     *
+     * @type {string}
+     */
+    dragAreaClass = 'dragArea';
 
-  onFileChange(event) {
+    @Input() projectId = 0;
+    @Input() sectionId = 0;
+    @Input() fileExt = 'JPG, GIF, PNG';
+    @Input() maxFiles = 5;
+    @Input() maxSize = 5;
+    @Output() uploadStatus = new EventEmitter();
+
+    /**
+     * Constructor injects the file service
+     *
+     * @param {FileService} fileService
+     */
+    constructor(private fileService: FileService) { }
+
+    /**
+     * TODO : Implement on Init
+     */
+    ngOnInit() { }
+
+    /**
+     * Saves the file every time the file input is changed
+     *
+     * @param event
+     */
+    onFileChange(event) {
       const files = event.target.files;
       this.saveFiles(files);
-  }
+    }
 
-  @HostListener('dragover', ['$event']) onDragOver(event) {
+    @HostListener('dragover', ['$event']) onDragOver(event) {
       event.preventDefault();
       this.dragAreaClass = 'dropArea';
-  }
+    }
 
-  @HostListener('dragenter', ['$event']) onDragEnter(event) {
+    @HostListener('dragenter', ['$event']) onDragEnter(event) {
       event.preventDefault();
       this.dragAreaClass = 'dropArea';
-  }
+    }
 
-  @HostListener('dragend', ['$event']) onDragEnd(event) {
+    @HostListener('dragend', ['$event']) onDragEnd(event) {
       event.preventDefault();
       this.dragAreaClass = 'dragArea';
-  }
+    }
 
-  @HostListener('dragleave', ['$event']) onDragLeave(event) {
+    @HostListener('dragleave', ['$event']) onDragLeave(event) {
       event.preventDefault();
       this.dragAreaClass = 'dragArea';
-  }
+    }
 
-  @HostListener('drop', ['$event']) onDrop(event) {
+    @HostListener('drop', ['$event']) onDrop(event) {
       event.preventDefault();
       event.stopPropagation();
       this.dragAreaClass = 'dragArea';
       const files = event.dataTransfer.files;
       this.saveFiles(files);
-  }
+    }
 
-  saveFiles(files) {
+    /**
+     *
+     * @param files
+     */
+    saveFiles(files) {
       this.errors = [];
       if (files.length > 0 && (!this.isValidFiles(files))) {
           this.uploadStatus.emit(false);
@@ -81,18 +111,18 @@ export class FileUploadComponent implements OnInit {
                   }
               );
       }
-  }
+    }
 
-  private isValidFiles(files) {
+    private isValidFiles(files) {
       if (files.length > this.maxFiles) {
           this.errors.push('Error: At a time you can upload only ' + this.maxFiles + ' files');
           return;
       }
       this.isValidFileExtension(files);
       return this.errors.length === 0;
-  }
+    }
 
-  private isValidFileExtension(files) {
+    private isValidFileExtension(files) {
       const extensions = (this.fileExt.split(','))
           .map(function (x) { return x.toLocaleUpperCase().trim(); });
       for (let i = 0; i < files.length; i++) {
@@ -103,13 +133,13 @@ export class FileUploadComponent implements OnInit {
           }
           this.isValidFileSize(files[i]);
       }
-  }
+    }
 
-  private isValidFileSize(file) {
+    private isValidFileSize(file) {
       const fileSizeInMB = file.size / (1024 * 1000);
       const size = Math.round(fileSizeInMB * 100) / 100;
       if (size > this.maxSize) {
           this.errors.push('Error (File Size): ' + file.name + ': exceed file size limit of ' + this.maxSize + 'MB ( ' + size + 'MB )');
       }
-  }
+    }
 }

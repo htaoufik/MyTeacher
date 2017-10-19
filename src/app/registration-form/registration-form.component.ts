@@ -7,14 +7,28 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   templateUrl: './registration-form.component.html',
   styleUrls: ['./registration-form.component.scss', '../app.component.scss']
 })
+
 export class RegistrationFormComponent {
+
+    /**
+     * The registration form
+     *
+     * @type FormGroup
+     */
     registrationForm: FormGroup;
+
+    /**
+     * Constructor injects the FormBuilder
+     *
+     * @param {FormBuilder} fb
+     */
     constructor(private fb: FormBuilder) {
         this.createForm();
     }
 
     /**
      * Creates the registration form with the validators
+     *
      * @return void
      */
     createForm(): void {
@@ -28,6 +42,7 @@ export class RegistrationFormComponent {
 
     /**
      * Gets the CSS class depending on the formControl status
+     *
      * @param {string} formControl
      * @returns {string}
      */
@@ -42,7 +57,8 @@ export class RegistrationFormComponent {
     }
 
     /**
-     * Define if an error message should be shown depending on control and error
+     * Defines if an error message should be shown depending on control and error
+     *
      * @param {string} formControl
      * @param {string} error
      * @returns {boolean}
