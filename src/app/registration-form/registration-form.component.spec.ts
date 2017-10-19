@@ -24,4 +24,35 @@ describe('RegistrationFormComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+    it('form invalid when empty', () => {
+        expect(component.registrationForm.valid).toBeFalsy();
+    });
+
+    it('email field should be a real email', () => {
+        const email = component.registrationForm.controls['email'];
+        email.setValue('test');
+        const errors = email.errors || {};
+        expect(errors['email']).toBeTruthy();
+    });
+
+    it('password should be more than 7 characters', () => {
+        const password = component.registrationForm.controls['password'];
+        password.setValue('1234567');
+        const errors = password.errors || {};
+        expect(errors['minlength']).toBeTruthy();
+    });
+
+    it('form valid when fulfilled with right values', () => {
+        const firstName = component.registrationForm.controls['firstName'];
+        const lastName = component.registrationForm.controls['lastName'];
+        const email = component.registrationForm.controls['email'];
+        const password = component.registrationForm.controls['password'];
+
+        firstName.setValue('John');
+        lastName.setValue('Doe');
+        email.setValue('john.doe@gmail.com');
+        password.setValue('12345678');
+
+        expect(component.registrationForm.valid).toBeTruthy();
+    });
 });
