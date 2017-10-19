@@ -1,0 +1,103 @@
+@import 'variables';
+@import 'mixins';
+
+input[type="text"], input[type="password"], input[type="email"] {
+  border: none;
+  border-bottom: 1px solid $mainGrey;
+  border-radius: 0;
+  @include open-sans(500);
+  font-size:14px;
+  color: $mainGrey;
+  text-align:left;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  width: 100%;
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+  }
+}
+
+.input-group .form-control {
+  width: 100%;
+}
+
+.form-control:focus {
+  border-color: $mainGrey;
+}
+
+input.ng-valid.ng-dirty {
+  border-bottom: 1px solid $mainOrange;
+}
+
+input.ng-invalid.ng-dirty {
+  border-bottom: 1px solid $errorColor;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-group .has-float-label .form-control {
+  border-radius: 0;
+}
+
+.has-float-label {
+  width:100%;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+* {
+  font-size: 14px;
+  top: 32px;
+  @include open-sans(500);
+}
+
+.has-float-label label, .has-float-label>span {
+  left:0;
+}
+
+.input-group-addon {
+  font-size: 21px;
+  color: $mainGrey;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid $mainGrey;
+  border-radius: 0;
+  &.add-on-valid {
+    border-bottom: 1px solid $mainOrange;
+    .fa {
+      color: $mainOrange;
+    }
+  }
+  &.add-on-error {
+    border-bottom: 1px solid $errorColor;
+    .fa {
+      color: $errorColor;
+    }
+  }
+}
+
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+  background-color: $mainOrange;
+  border: none;
+  font-family: $gloria;
+  font-size: 35px;
+  margin: 40px 0;
+  padding: 20px;
+  &:hover {
+    background-color: $mainGrey;
+  }
+}
+
+.alert-danger {
+  color: $errorColor;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
