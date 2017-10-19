@@ -39,6 +39,10 @@ input.ng-invalid.ng-dirty {
   border-radius: 0;
 }
 
+.has-float-label {
+  width:100%;
+}
+
 .has-float-label .form-control:placeholder-shown:not(:focus)+* {
   font-size: 14px;
   top: 32px;

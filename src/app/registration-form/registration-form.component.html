@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-
+    <div class="col-12">
     <form [formGroup]="registrationForm" novalidate autocomplete="off">
       <div class="form-group input-group">
         <span class="has-float-label">
@@ -44,5 +44,6 @@
         <button class="btn btn-primary btn-block" [disabled]="!registrationForm.valid" type="submit">Play</button>
       </div>
     </form>
+    </div>
   </div>
 </div>

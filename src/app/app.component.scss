@@ -5,10 +5,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body {
-  background-color: $mainGrey;
-}
-
 #header {
   height:84px;
   background-color: $mainGrey;
@@ -18,10 +14,13 @@ body {
   }
 }
 
+
+
 h1 {
   font-family: $gloria;
   font-size: 60px;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   color: $mainGrey;
 }
 
@@ -32,6 +31,10 @@ h1 {
     line-height: 84px;
     margin-top: 13px;
   }
+}
+
+#content {
+  flex: 1;
 }
 
 .social-links {
