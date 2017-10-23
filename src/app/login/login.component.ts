@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { InputAddOnService } from '../../services/input-add-on.service';
 
 @Component({
     selector: 'app-login',
@@ -24,15 +25,23 @@ export class LoginComponent {
      */
     loginForm: FormGroup;
 
+    // inputAddOnInstance = InputAddOnService.getInstance();
+
     /**
      * Constructor injects the Auth Service and the router
      *
      * @param {AuthService} authService
      * @param {Router} router
      * @param {FormBuilder} fb
+     * @param {InputAddOnService} addOnService
      * @return void
      */
-    constructor(public authService: AuthService, public router: Router, private fb: FormBuilder) {
+    constructor(
+        public authService: AuthService,
+        public router: Router,
+        private fb: FormBuilder,
+        public addOnService: InputAddOnService
+    ) {
         this.createForm();
         this.setMessage();
     }
@@ -63,7 +72,7 @@ export class LoginComponent {
      *
      * @return void
      */
-    login() {
+    login(): void {
         this.message = 'Trying to log in ...';
 
         this.authService.login().subscribe(() => {
@@ -80,36 +89,8 @@ export class LoginComponent {
      *
      * @return void
      */
-    logout() {
+    logout(): void {
         this.authService.logout();
         this.setMessage();
-    }
-
-    /**
-     * Gets the CSS class depending on the formControl status
-     *
-     * @param {string} formControl
-     * @returns {string}
-     */
-    getAddOnClass(formControl: string): string {
-        const control = this.loginForm.get(formControl);
-        if (control.valid && control.dirty) {
-            return 'add-on-valid';
-        }
-        if (control.invalid && control.dirty) {
-            return 'add-on-error';
-        }
-    }
-
-    /**
-     * Defines if an error message should be shown depending on control and error
-     *
-     * @param {string} formControl
-     * @param {string} error
-     * @returns {boolean}
-     */
-    showError(formControl: string, error: string): boolean {
-        const control = this.loginForm.get(formControl);
-        return control.hasError(error) && control.dirty;
     }
 }

@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import { AppRoutingModule } from './app-routing.module';
+import {InputAddOnService} from "../services/input-add-on.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [FileService, AuthGuard, AuthService],
+  providers: [FileService, AuthGuard, AuthService, InputAddOnService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

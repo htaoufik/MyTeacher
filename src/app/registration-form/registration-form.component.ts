@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Teacher } from '../data-model/teacher';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { InputAddOnService } from '../../services/input-add-on.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -21,8 +22,9 @@ export class RegistrationFormComponent {
      * Constructor injects the FormBuilder
      *
      * @param {FormBuilder} fb
+     * @param {InputAddOnService} addOnService
      */
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: FormBuilder, public addOnService: InputAddOnService) {
         this.createForm();
     }
 
@@ -38,33 +40,5 @@ export class RegistrationFormComponent {
             email: ['', [Validators.required, Validators.email] ],
             password: ['', [Validators.required, Validators.minLength(8)] ],
         });
-    }
-
-    /**
-     * Gets the CSS class depending on the formControl status
-     *
-     * @param {string} formControl
-     * @returns {string}
-     */
-    getAddOnClass(formControl: string): string {
-        const control = this.registrationForm.get(formControl);
-        if (control.valid && control.dirty) {
-            return 'add-on-valid';
-        }
-        if (control.invalid && control.dirty) {
-            return 'add-on-error';
-        }
-    }
-
-    /**
-     * Defines if an error message should be shown depending on control and error
-     *
-     * @param {string} formControl
-     * @param {string} error
-     * @returns {boolean}
-     */
-    showError(formControl: string, error: string): boolean {
-        const control = this.registrationForm.get(formControl);
-        return control.hasError(error) && control.dirty;
     }
 }
