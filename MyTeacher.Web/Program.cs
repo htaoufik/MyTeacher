@@ -20,6 +20,8 @@ namespace MyTeacher.Web
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseWebRoot("wwwroot") // name it whatever you want
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
     }
 }

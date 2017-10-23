@@ -21,6 +21,7 @@ const entryPoints = ["inline","polyfills","sw-register","styles","vendor","main"
 const minimizeCss = false;
 const baseHref = "";
 const deployUrl = "";
+
 const postcssPlugins = function () {
         // safe settings based on: https://github.com/ben-eb/cssnano/issues/358#issuecomment-283696193
         const importantCommentRe = /@preserve|@license|[@#]\s*source(?:Mapping)?URL|^!/i;
@@ -88,11 +89,11 @@ module.exports = {
     "styles": [
       "./src/sass/styles.scss",
       "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-      "./node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css"
+      "./node_modules/bootstrap-float-label/bootstrap-float-label.min.css"
     ]
   },
   "output": {
-    "path": path.join(process.cwd(), "dist"),
+    "path": path.join(process.cwd(), "wwwroot"),
     "filename": "[name].bundle.js",
     "chunkFilename": "[id].chunk.js"
   },
@@ -122,7 +123,7 @@ module.exports = {
         "exclude": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.css$/,
         "use": [
@@ -147,7 +148,7 @@ module.exports = {
         "exclude": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.scss$|\.sass$/,
         "use": [
@@ -172,7 +173,7 @@ module.exports = {
               "sourceMap": false,
               "precision": 8,
               "includePaths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -182,7 +183,7 @@ module.exports = {
         "exclude": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.less$/,
         "use": [
@@ -206,7 +207,7 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "paths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -216,7 +217,7 @@ module.exports = {
         "exclude": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.styl$/,
         "use": [
@@ -240,7 +241,7 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "paths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -250,7 +251,7 @@ module.exports = {
         "include": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.css$/,
         "use": [
@@ -275,7 +276,7 @@ module.exports = {
         "include": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.scss$|\.sass$/,
         "use": [
@@ -300,7 +301,7 @@ module.exports = {
               "sourceMap": false,
               "precision": 8,
               "includePaths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -310,7 +311,7 @@ module.exports = {
         "include": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.less$/,
         "use": [
@@ -334,7 +335,7 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "paths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -344,7 +345,7 @@ module.exports = {
         "include": [
           path.join(process.cwd(), "src/sass/styles.scss"),
           path.join(process.cwd(), "node_modules/bootstrap/dist/css/bootstrap.min.css"),
-          path.join(process.cwd(), "node_modules/bootstrap-float-label/dist/bootstrap-float-label.min.css")
+          path.join(process.cwd(), "node_modules/bootstrap-float-label/bootstrap-float-label.min.css")
         ],
         "test": /\.styl$/,
         "use": [
@@ -368,7 +369,7 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "paths": [
-                "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/sass"
+                "src/sass"
               ]
             }
           }
@@ -388,8 +389,8 @@ module.exports = {
       "name": "scripts",
       "fileName": "[name].bundle.js",
       "filesToConcat": [
-        "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/node_modules/jquery/dist/jquery.min.js",
-        "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js"
       ]
     }),
     new InsertConcatAssetsWebpackPlugin([
@@ -397,7 +398,7 @@ module.exports = {
     ]),
     new CopyWebpackPlugin([
       {
-        "context": "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/",
+        "context": "src/",
         "to": "",
         "from": {
           "glob": "assets/**/*",
@@ -405,7 +406,7 @@ module.exports = {
         }
       },
       {
-        "context": "/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/src/",
+        "context": "src/",
         "to": "",
         "from": {
           "glob": "favicon.ico",
