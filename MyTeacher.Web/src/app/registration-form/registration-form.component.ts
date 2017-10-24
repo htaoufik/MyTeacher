@@ -6,7 +6,7 @@ import { InputAddOnService } from '../../services/input-add-on.service';
 @Component({
   selector: 'app-registration-form',
   templateUrl: './registration-form.component.html',
-  styleUrls: ['./registration-form.component.scss', '../app.component.scss']
+  styleUrls: ['./registration-form.component.scss', '../app.component.scss',  '../../sass/form.scss']
 })
 
 export class RegistrationFormComponent {
