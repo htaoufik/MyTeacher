@@ -78,6 +78,7 @@ export class LoginComponent {
         this.authService.login().subscribe(() => {
             this.setMessage();
             if (this.authService.isLoggedIn) {
+                localStorage.setItem('isAuthenticated', 'true');
                 const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/home-teacher';
                 this.router.navigate([redirect]);
             }
@@ -91,6 +92,7 @@ export class LoginComponent {
      */
     logout(): void {
         this.authService.logout();
+        localStorage.setItem('isAuthenticated', 'false');
         this.setMessage();
     }
 }

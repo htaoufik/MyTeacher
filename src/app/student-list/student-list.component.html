@@ -2,16 +2,18 @@
     <h2>My students</h2>
 
     <div class="student" *ngFor="let student of STUDENTS">
-        <div class="block-thumbnail">
-            <img src="../../assets/images/profile-picture/thumbs/{{ student.thumbnail }}" class="thumbnail">
-        </div>
-        <div class="block-name">
-            <p class="name">{{ student.firstName}} {{ student.lastName }}</p>
-            <p class="instrument">{{ student.instrument }}</p>
-        </div>
-        <div class="student-selector">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-        </div>
+        <a [routerLink]="['/student-details', student.id ]">
+            <div class="block-thumbnail">
+                <img src="../../assets/images/profile-picture/thumbs/{{ student.thumbnail }}" class="thumbnail">
+            </div>
+            <div class="block-name">
+                <p class="name">{{ student.firstName}} {{ student.lastName }}</p>
+                <p class="instrument">{{ student.instrument }}</p>
+            </div>
+            <div class="student-selector">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </a>
     </div>
 
     <p class="text-center">

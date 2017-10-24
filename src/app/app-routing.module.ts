@@ -6,11 +6,13 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
+import {StudentDetailsComponent} from "./student-details/student-details.component";
 
 const appRoutes: Routes = [
     { path: 'registration', component: RegistrationComponent},
     { path: 'login', component: LoginComponent},
     { path: 'home-teacher', component: HomeTeacherComponent, canActivate: [AuthGuard]},
+    { path: 'student-details/:id', component: StudentDetailsComponent, canActivate: [AuthGuard]},
     { path: '',   redirectTo: '/home-teacher', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];

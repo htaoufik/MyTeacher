@@ -7,12 +7,14 @@ export class Student {
      * @param {string} lastName
      * @param {string} instrument
      * @param {string} thumbnail
+     * @param {string} picture
      */
     constructor (
         public id: number,
         public firstName: string,
         public lastName: string,
         public instrument: string,
-        public thumbnail: string
+        public thumbnail: string = '',
+        public picture: string = ''
     ) { }
 }
