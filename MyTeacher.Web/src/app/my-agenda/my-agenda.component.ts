@@ -4,7 +4,7 @@ import {TimeSlot} from "../data-model/time-slot";
 @Component({
   selector: 'app-my-agenda',
   templateUrl: './my-agenda.component.html',
-  styleUrls: ['./my-agenda.component.scss', '../app.component.scss']
+  styleUrls: ['./my-agenda.component.scss', '../app.component.scss', '../../sass/form.scss']
 })
 export class MyAgendaComponent implements OnInit {
 
