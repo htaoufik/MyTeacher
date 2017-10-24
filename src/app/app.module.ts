@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import { AppRoutingModule } from './app-routing.module';
 import {InputAddOnService} from "../services/input-add-on.service";
+import { StudentListComponent } from './student-list/student-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {InputAddOnService} from "../services/input-add-on.service";
     RegistrationComponent,
     LoginComponent,
     PageNotFoundComponent,
-    HomeTeacherComponent
+    HomeTeacherComponent,
+    StudentListComponent
   ],
   imports: [
     BrowserModule,

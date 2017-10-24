@@ -22,6 +22,12 @@ h1 {
   color: $mainGrey;
 }
 
+h2 {
+  @include open-sans(300);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 #footer {
   height:84px;
   background-color: $mainGrey;
@@ -50,4 +56,9 @@ h1 {
   color: #ffffff;
   line-height: 84px;
   margin-bottom: 0;
+}
+
+.toggle-menu {
+  color: white;
+  font-size: 40px;
 }

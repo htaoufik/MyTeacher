@@ -1,0 +1,70 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+#menuCollapse {
+  @include shadow(2px, 2px, 2px, 2px, $mediumGrey);
+  width: 350px;
+  padding: 40px 20px;
+  height: calc(100vh - 168px);
+}
+
+.student {
+  background-color: $lightGrey;
+  height: 100px;
+  width: 310px;
+  margin-bottom: 2px;
+  padding: 0;
+  line-height: 1;
+  .block-thumbnail {
+    display: inline-block;
+    width: 120px;
+    line-height: 1;
+    text-align: center;
+    padding: 0;
+    margin:0;
+    height: 100px;
+    vertical-align: middle;
+    .thumbnail {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      height: 88px;
+      width: 88px;
+      border-radius: 50%;
+      @include shadow(1px, 1px, 1px, 1px, $mediumGrey);
+    }
+  }
+  .block-name {
+    display: inline-block;
+    width: 160px;
+    line-height: 1;
+  }
+  .student-selector {
+    background-color: $mediumGrey;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    line-height: 1;
+    .fa {
+      color: $mainGrey;
+      margin-top: 45px;
+      padding: 0;
+    }
+  }
+}
+
+.student .name {
+  @include open-sans(500);
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.student .instrument {
+  @include open-sans(300);
+  font-size: 11px;
+}
+

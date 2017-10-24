@@ -4,3 +4,9 @@
   font-family: $openSans;
   font-weight: $weight;
 }
+
+@mixin shadow ($horizontalOffset, $verticalOffset, $blur, $length, $color){
+  -webkit-box-shadow: $horizontalOffset $verticalOffset $blur $length $color;
+  -moz-box-shadow: $horizontalOffset $verticalOffset $blur $length $color;
+  box-shadow: $horizontalOffset $verticalOffset $blur $length $color;
+}
