@@ -2,10 +2,15 @@
 @import '../../sass/mixins';
 
 #menuCollapse {
-  @include shadow(2px, 2px, 2px, 2px, $mediumGrey);
+  @include shadow(2px, 0, 2px, 0, $mediumGrey);
   width: 350px;
   padding: 40px 20px;
   height: calc(100vh - 168px);
+  overflow: scroll;
+  .btn-primary {
+    height: 63px;
+    font-size: 26px;
+  }
 }
 
 .student {

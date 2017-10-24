@@ -17,6 +17,7 @@ import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import { AppRoutingModule } from './app-routing.module';
 import {InputAddOnService} from "../services/input-add-on.service";
 import { StudentListComponent } from './student-list/student-list.component';
+import { MyAgendaComponent } from './my-agenda/my-agenda.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StudentListComponent } from './student-list/student-list.component';
     LoginComponent,
     PageNotFoundComponent,
     HomeTeacherComponent,
-    StudentListComponent
+    StudentListComponent,
+    MyAgendaComponent
   ],
   imports: [
     BrowserModule,

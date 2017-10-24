@@ -1,0 +1,57 @@
+<div class="main-stage">
+    <h1>My agenda</h1>
+    <div class="row">
+        <div class="col-lg-6">
+            <ul class="nav nav-pills period-switcher">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">today</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">week</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">month</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-right">
+            <a href="#" class="btn btn-primary small">Manage my slots</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            <h3><i class="fa fa-play" aria-hidden="true"></i> Current</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg time-block active">
+            <div class="row">
+                <div class="thumbnail col-lg-3 text-center">
+                    <img src="assets/images/profile-picture/thumbs/{{ TimeSlots[0].thumbnail }}" class="img-thumbnail rounded-circle">
+                </div>
+                <div class="time-details col-lg-9">
+                    <p class="student-name">{{ TimeSlots[0].firstName }} {{ TimeSlots[0].lastName }}</p>
+                    <p class="time-range"><i class="fa fa-clock-o" aria-hidden="true"></i> From {{ TimeSlots[0].from }} to {{ TimeSlots[0].to }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            <h3><i class="fa fa-fast-forward" aria-hidden="true"></i> Following</h3>
+        </div>
+    </div>
+    <div class="row" *ngFor="let timeSlot of TimeSlots | slice:1">
+        <div class="col-lg time-block">
+            <div class="row">
+                <div class="thumbnail col-lg-3 text-center">
+                    <img src="assets/images/profile-picture/thumbs/{{ timeSlot.thumbnail }}" class="img-thumbnail rounded-circle">
+                </div>
+                <div class="time-details col-lg-9">
+                    <p class="student-name">{{ timeSlot.firstName }} {{ timeSlot.lastName }}</p>
+                    <p class="time-range"><i class="fa fa-clock-o" aria-hidden="true"></i> From {{ timeSlot.from }} to {{ timeSlot.to }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

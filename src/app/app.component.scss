@@ -28,6 +28,16 @@ h2 {
   margin-bottom: 20px;
 }
 
+h3 {
+  @include open-sans(300);
+  font-size: 14px;
+  color: $mainGrey;
+  margin-top: 40px;
+  .fa {
+    margin-right: 10px;
+  }
+}
+
 #footer {
   height:84px;
   background-color: $mainGrey;
