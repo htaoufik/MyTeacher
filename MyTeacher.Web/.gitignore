@@ -43,3 +43,6 @@ testem.log
 .DS_Store
 Thumbs.db
 /MyTeacher.Web.csproj.user
+
+# Dist
+/wwwroot
