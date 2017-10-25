@@ -1,0 +1,11 @@
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/bin/Debug/netcoreapp2.0/MyTeacher.Web.deps.json
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/bin/Debug/netcoreapp2.0/MyTeacher.Web.runtimeconfig.json
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/bin/Debug/netcoreapp2.0/MyTeacher.Web.runtimeconfig.dev.json
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/bin/Debug/netcoreapp2.0/MyTeacher.Web.dll
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/bin/Debug/netcoreapp2.0/MyTeacher.Web.pdb
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.csproj.CoreCompileInputs.cache
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.AssemblyInfoInputs.cache
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.AssemblyInfo.cs
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.dll
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.pdb
+/Users/frslb/Documents/in_progress/FRONT_YEAH/yeah/MyTeacher.Web/obj/Debug/netcoreapp2.0/MyTeacher.Web.csprojResolveAssemblyReference.cache
