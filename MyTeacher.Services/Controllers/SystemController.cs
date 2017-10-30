@@ -1,18 +1,23 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MyTeacher.Web.Controllers
+namespace MyTeacher.Services.Controllers
 {
-  [Route("rest/system")]
-  public class SystemController
-  {
-    [HttpGet]
-    public string hello()
-    {
-      return "Hello friend";
-    }
-  }
+   [Route("rest/system")]
+   public class SystemController
+   {
+      [HttpGet]
+      public string hello()
+      {
+         return "Hello friend";
+      }
+
+      [HttpGet("limited")]
+      [Authorize]
+      public string helloLimited()
+      {
+         return "Hello limited friend";
+      }
+
+   }
 }

@@ -1,23 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace MyTeacher.Models
+namespace MyTeacher.Services.Models
 {
-    public class TimeSlot
-    {
+   public class TimeSlot
+   {
+      enum Frenquency
+      {
+         Daily,
+         Weekly,
+         BiWeekly,
+         Monthly
+      }
 
-        enum Frenquency
-        {
-            Daily,
-            Weekly,
-            BiWeekly,
-            Monthly
-        }
-
-        DateTime startDate;
-        DateTime endDate;
-        Frenquency frenquency;
-    }
+      DateTime startDate;
+      DateTime endDate;
+      Frenquency frenquency;
+   }
 }

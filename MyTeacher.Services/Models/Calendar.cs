@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MyTeacher.Models
+﻿namespace MyTeacher.Services.Models
 {
-    public class Calendar
-    {
-    }
+   public class Calendar
+   {
+   }
 }

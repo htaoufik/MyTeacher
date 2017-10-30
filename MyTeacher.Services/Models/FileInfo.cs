@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MyTeacher.Models;
 
-namespace MyTeacher.Models
+namespace MyTeacher.Services.Models
 {
-    public class FileInfo : MongoBaseEntity
-    {
-        string FileName;
-
-    }
+   public class FileInfo : MongoBaseEntity
+   {
+      string FileName;
+   }
 }

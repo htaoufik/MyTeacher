@@ -1,8 +1,10 @@
-﻿using MyTeacher.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace MyTeacher.Services.Models
+namespace MyTeacher.Services.Dto
 {
-   public class User : MongoBaseEntity
+   public class AccountCreationRequest
    {
       public string FirstName { get; set; }
       public string LastName { get; set; }
