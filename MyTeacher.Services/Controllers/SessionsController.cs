@@ -19,6 +19,8 @@ namespace MyTeacher.Services.Controllers
    {
       private readonly IMongoRepository<User> _userRepository;
 
+
+      // TODO: Inject a dedicated class for this later
       public static string HashPassword(string password)
       {
          // Hash the password

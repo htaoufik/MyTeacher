@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using MyTeacher.Models;
 using MyTeacher.Services.Dto;
 using MyTeacher.Services.Models;
@@ -26,26 +27,22 @@ namespace MyTeacher.Services.Controllers
       [HttpPost]
       public async Task<IActionResult> CreateAccount([FromBody] AccountCreationRequest accountCreationRequest)
       {
-         // Creates an account and the associated user ... but what the if one of the actions fails ? 
+         // TODO: Creates an account and the associated user ... but what if one of the actions fails ? 
 
-         // Hash the password
-         // SHA512 is disposable by inheritance.  
-         using (var sha256 = SHA256.Create())
+         // Check if the user already exist
+         if ((await _userRepository.FindAsync(u => u.Email == accountCreationRequest.Email)).Any())
          {
-            // Send a sample text to hash.  
-            var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(accountCreationRequest.Password));
-            // Get the hashed string.  
-            accountCreationRequest.Password = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-         } 
+            // TODO: add an generic error handler somewhere !
+            return BadRequest(new {description = "User already exist", code = "MT-002"});
+         }
 
-         // TODO check if the user already exist
          // Lets create the user
          User user = new User()
          { 
             Email = accountCreationRequest.Email,
             FirstName = accountCreationRequest.FirstName,
             LastName = accountCreationRequest.LastName,
-            Password = accountCreationRequest.Password
+            Password = SessionsController.HashPassword(accountCreationRequest.Password)
          };
 
          await _userRepository.AddAsync(user);

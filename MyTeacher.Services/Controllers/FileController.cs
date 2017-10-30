@@ -10,7 +10,7 @@ namespace MyTeacher.Services.Controllers
    [Route("rest/files")]
    public class FileController
    {
-      [HttpPost("UploadFiles")]
+      [HttpPost]
       public async Task<IActionResult> Post(List<IFormFile> files)
       {
          long size = files.Sum(f => f.Length);
