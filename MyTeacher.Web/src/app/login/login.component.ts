@@ -54,7 +54,7 @@ export class LoginComponent {
     createForm(): void {
         this.loginForm = this.fb.group({
             email: ['', [Validators.required, Validators.email] ],
-            password: ['', [Validators.required, Validators.minLength(8)] ],
+            password: ['', [Validators.required, Validators.minLength(6)] ],
         });
     }
 
@@ -75,7 +75,7 @@ export class LoginComponent {
     login(): void {
         this.message = 'Trying to log in ...';
 
-        this.authService.login().subscribe(() => {
+        this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(() => {
             this.setMessage();
             if (this.authService.isLoggedIn) {
                 localStorage.setItem('isAuthenticated', 'true');

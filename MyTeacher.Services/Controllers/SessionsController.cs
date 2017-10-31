@@ -63,7 +63,7 @@ namespace MyTeacher.Services.Controllers
             CookieAuthenticationDefaults.AuthenticationScheme,
             new ClaimsPrincipal(identity));
 
-         return Ok();
+         return NoContent();
       }
 
       [HttpDelete]

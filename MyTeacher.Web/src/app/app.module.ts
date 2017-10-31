@@ -3,6 +3,8 @@ import { NgModule} from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { FileService } from '../services/file.service';
 import { AuthGuard} from './auth-guard.service';
@@ -20,28 +22,31 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { MyAgendaComponent } from './my-agenda/my-agenda.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    FileUploadComponent,
-    RegistrationFormComponent,
-    RegistrationComponent,
-    LoginComponent,
-    PageNotFoundComponent,
-    HomeTeacherComponent,
-    StudentListComponent,
-    MyAgendaComponent,
-    StudentDetailsComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [FileService, AuthGuard, AuthService, InputAddOnService],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      FileUploadComponent,
+      RegistrationFormComponent,
+      RegistrationComponent,
+      LoginComponent,
+      PageNotFoundComponent,
+      HomeTeacherComponent,
+      StudentListComponent,
+      MyAgendaComponent,
+      StudentDetailsComponent
+   ],
+   imports: [
+      BrowserModule,
+      HttpModule,
+      FormsModule,
+      ReactiveFormsModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      HttpClientModule
+   ],
+   providers: [FileService, AuthGuard, AuthService, InputAddOnService],
+   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
