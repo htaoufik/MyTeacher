@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AppComponent } from './app.component';
+import { TeacherAppLayoutComponent } from './teacher-app-layout/teacher-app-layout.component';
 import { AuthGuard } from './auth-guard.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -8,19 +9,34 @@ import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import {StudentDetailsComponent} from "./student-details/student-details.component";
 
-const appRoutes: Routes = [
-    { path: 'registration', component: RegistrationComponent},
-    { path: 'login', component: LoginComponent},
-    { path: 'home-teacher', component: HomeTeacherComponent, canActivate: [AuthGuard]},
-    { path: 'student-details/:id', component: StudentDetailsComponent, canActivate: [AuthGuard]},
-    { path: '',   redirectTo: '/home-teacher', pathMatch: 'full' },
-    { path: '**', component: PageNotFoundComponent }
+
+const routes: Routes = [
+   {
+      path: 'teacher',                       
+      component: TeacherAppLayoutComponent,
+      canActivate: [AuthGuard],        
+      children: [
+         { path: '', redirectTo: 'home', pathMatch: 'full' },
+         { path: 'home', component: HomeTeacherComponent },
+         { path: 'student-details/:id', component: StudentDetailsComponent }
+      ]
+   },
+   {
+      path: '',
+      component: AppComponent, 
+      children: [
+         { path: '', redirectTo: '/login', pathMatch: 'full' },
+         { path: 'registration', component: RegistrationComponent },
+         { path: 'login', component: LoginComponent }
+      ]
+   }
 ];
+
 
 @NgModule({
     imports: [
         RouterModule.forRoot(
-            appRoutes,
+           routes,
             { enableTracing: true } // <-- debugging purposes only
         )
     ],

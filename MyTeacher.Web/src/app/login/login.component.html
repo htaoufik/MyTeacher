@@ -31,8 +31,8 @@
                     <div class="alert alert-danger" *ngIf="addOnService.showError(this.loginForm, 'password', 'minlength')">Your password should be 8 characters minimum</div>
                 </form>
                 <p>
-                    <button (click)="login()"  *ngIf="!authService.isLoggedIn" class="btn btn-primary btn-block">Login</button>
-                    <button (click)="logout()" *ngIf="authService.isLoggedIn" class="btn btn-primary btn-block">Logout</button>
+                    <button (click)="login()"  *ngIf="!authService.isLoggedIn()" class="btn btn-primary btn-block">Login</button>
+                    <button (click)="logout()" *ngIf="authService.isLoggedIn()" class="btn btn-primary btn-block">Logout</button>
                 </p>
             </div>
         </div>

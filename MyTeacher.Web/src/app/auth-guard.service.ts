@@ -32,12 +32,10 @@ export class AuthGuard implements CanActivate {
      */
     checkLogin(url: string): boolean {
 
-        if (this.authService.isLoggedIn) {
+        if (this.authService.isLoggedIn()) {
             return true;
         }
-        if (localStorage.getItem('isAuthenticated') === 'true') {
-            return true;
-        }
+
         this.authService.redirectUrl = url;
 
         this.router.navigate(['/login']);

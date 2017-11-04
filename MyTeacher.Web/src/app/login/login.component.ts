@@ -64,7 +64,7 @@ export class LoginComponent {
      * @return void
      */
     setMessage() {
-        this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
+        this.message = 'Logged ' + (this.authService.isLoggedIn() ? 'in' : 'out');
     }
 
     /**
@@ -75,13 +75,11 @@ export class LoginComponent {
     login(): void {
         this.message = 'Trying to log in ...';
 
-        this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(() => {
+        this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(() =>
+        {
             this.setMessage();
-            if (this.authService.isLoggedIn) {
-                localStorage.setItem('isAuthenticated', 'true');
-                const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/home-teacher';
-                this.router.navigate([redirect]);
-            }
+            const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/teacher/home';
+            this.router.navigate([redirect]);       
         });
     }
 

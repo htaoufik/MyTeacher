@@ -21,9 +21,20 @@ import {InputAddOnService} from "../services/input-add-on.service";
 import { StudentListComponent } from './student-list/student-list.component';
 import { MyAgendaComponent } from './my-agenda/my-agenda.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { TeacherAppLayoutComponent } from './teacher-app-layout/teacher-app-layout.component';
+import { AppHeader } from './components/app-header/app-header.component';
 
 
 @NgModule({
+   imports: [
+      BrowserModule,
+      HttpModule,
+      FormsModule,
+      ReactiveFormsModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      HttpClientModule
+   ],
    declarations: [
       AppComponent,
       FileUploadComponent,
@@ -34,19 +45,19 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
       HomeTeacherComponent,
       StudentListComponent,
       MyAgendaComponent,
-      StudentDetailsComponent
+      StudentDetailsComponent,
+      TeacherAppLayoutComponent,
+      AppHeader
    ],
-   imports: [
-      BrowserModule,
-      HttpModule,
-      FormsModule,
-      ReactiveFormsModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      HttpClientModule
+   providers: [
+      FileService,
+      AuthGuard,
+      AuthService,
+      InputAddOnService
    ],
-   providers: [FileService, AuthGuard, AuthService, InputAddOnService],
-   bootstrap: [AppComponent]
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {
 }

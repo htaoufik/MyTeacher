@@ -11,13 +11,6 @@ import { environment } from '../environments/environment'
 export class AuthService {
 
    /**
-    * Defines if the user is logged in
-    *
-    * @type {boolean}
-    */
-   isLoggedIn = false;
-
-   /**
     * This URL is used to redirect the user in case the authentication is successful
     *
     * @type {string}
@@ -28,6 +21,17 @@ export class AuthService {
    constructor(private http: HttpClient)
    {
    }
+
+   public isLoggedIn(): boolean
+   {
+      if (localStorage.getItem('isAuthenticated') === 'true')
+      {
+         return true;
+      }
+
+      return false;
+   }
+
 
    /**
     * This method will check the connection status for a specific user
@@ -43,8 +47,8 @@ export class AuthService {
             environment.apiEndPoints.sessionService,
             { "email": email, "password": password }
          ).subscribe(
-            () => { this.isLoggedIn = true; observer.next(true); observer.complete(); },
-            () => { this.isLoggedIn = false; observer.next(false); observer.complete();}
+            () => { localStorage.setItem('isAuthenticated','true') ; observer.next(true); observer.complete(); },
+            () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(false); observer.complete();}
           );
       });
 
@@ -56,8 +60,18 @@ export class AuthService {
     *
     * @returns void
     */
-   logout(): void
+   logout(): Observable<void>
    {
-      this.isLoggedIn = false;
+      // TODO: Shall we realy return a boolean observable as we set the isLoggedIn member ?
+      var observable: Observable<void> = Observable.create(observer => {
+         this.http.delete(
+            environment.apiEndPoints.sessionService
+         ).subscribe(
+            () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(); observer.complete(); },
+            () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(); observer.complete(); } // TODO what do we do in case of error ? : )
+         );
+      });
+
+      return observable;
    }
 }
