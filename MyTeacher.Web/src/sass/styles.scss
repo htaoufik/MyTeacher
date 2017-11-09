@@ -2,5 +2,14 @@
 @import './mixins';
 
 app-root {
-  min-height: 100vh;
+   min-height: 100vh;
+   display: block;
+}
+
+html{
+   min-height:100vh;
+}
+
+body {
+   min-height: 100vh;
 }

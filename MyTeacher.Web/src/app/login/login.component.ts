@@ -7,7 +7,7 @@ import { InputAddOnService } from '../../services/input-add-on.service';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css', '../app.component.scss', '../../sass/form.scss']
+    styleUrls: ['./login.component.scss', '../app.component.scss', '../../sass/form.scss']
 })
 export class LoginComponent {
 
@@ -16,7 +16,7 @@ export class LoginComponent {
      *
      * @type {string}
      */
-    message: string;
+    message: string; 
 
     /**
      * The registration form
