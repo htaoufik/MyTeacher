@@ -23,7 +23,7 @@ namespace MyTeacher.Services.Controllers
          _teacherAccountRepository = database.Repository<TeacherAccount>();
          _userRepository = database.Repository<User>();
       }
-
+     
       [HttpPost]
       public async Task<IActionResult> CreateAccount([FromBody] AccountCreationRequest accountCreationRequest)
       {

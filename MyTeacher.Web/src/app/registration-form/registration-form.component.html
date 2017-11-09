@@ -1,6 +1,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
+
+            <div class="alert alert-info" *ngIf="this.submitted">{{ message }}</div>
             <form [formGroup]="registrationForm" novalidate autocomplete="off">
                 <div class="form-group input-group">
                 <span class="has-float-label">
@@ -45,7 +47,7 @@
                 <div class="alert alert-danger" *ngIf="this.addOnService.showError(this.registrationForm, 'password', 'required')">Your password is required</div>
                 <div class="alert alert-danger" *ngIf="this.addOnService.showError(this.registrationForm, 'password', 'minlength')">Your password should be 8 characters minimum</div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" [disabled]="!registrationForm.valid" type="submit">Play</button>
+                    <button class="btn btn-primary btn-block" (click)="register()" [disabled]="!registrationForm.valid" type="submit">Play</button>
                 </div>
             </form>
         </div>

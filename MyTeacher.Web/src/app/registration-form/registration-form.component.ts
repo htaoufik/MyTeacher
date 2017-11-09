@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
+import {
+    HttpClient, HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest,
+    HttpResponse
+} from '@angular/common/http';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
 import { Teacher } from '../data-model/teacher';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { InputAddOnService } from '../../services/input-add-on.service';
+import { environment } from '../../environments/environment';
+
 
 @Component({
   selector: 'app-registration-form',
@@ -12,6 +19,20 @@ import { InputAddOnService } from '../../services/input-add-on.service';
 export class RegistrationFormComponent {
 
     /**
+     * The message displayed to the visitor attempting to register
+     *
+     * @type {string}
+     */
+    message: string;
+
+    /**
+     * Status sent by registration service once the request is submitted
+     *
+     * @type boolean
+     */
+    registrationStatus: Observable<boolean>;
+
+    /**
      * The registration form
      *
      * @type FormGroup
@@ -19,12 +40,20 @@ export class RegistrationFormComponent {
     registrationForm: FormGroup;
 
     /**
+     * Form submission status
+     *
+     * @type boolean
+     */
+    submitted: boolean = false;
+
+    /**
      * Constructor injects the FormBuilder
      *
      * @param {FormBuilder} fb
      * @param {InputAddOnService} addOnService
+     * @param {HttpClient} http
      */
-    constructor(private fb: FormBuilder, public addOnService: InputAddOnService) {
+    constructor(private fb: FormBuilder, public addOnService: InputAddOnService, private http: HttpClient) {
         this.createForm();
     }
 
@@ -40,5 +69,35 @@ export class RegistrationFormComponent {
             email: ['', [Validators.required, Validators.email] ],
             password: ['', [Validators.required, Validators.minLength(8)] ],
         });
+    }
+
+    /**
+     * Sends the Http request to register the current user
+     *
+     * @return void
+     */
+    register(): void {
+        this.submitted = true;
+        this.http.post(
+            environment.apiEndPoints.registrationService,
+            {
+                'firstName': this.registrationForm.value.firstName,
+                'lastName': this.registrationForm.value.lastName,
+                'email': this.registrationForm.value.email,
+                'password': this.registrationForm.value.password,
+            }
+        ).subscribe(
+            data => {
+                this.message = 'Your account has been created';
+                },
+            (error: HttpErrorResponse) => {
+                if (error.error instanceof Error) {
+                    this.message = error.error.message;
+                } else {
+                    this.message = `Backend returned code ${error.status}, body was: ${error.error}`;
+                }
+            }
+        );
+
     }
 }

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class AuthService {
@@ -18,18 +18,10 @@ export class AuthService {
    redirectUrl: string;
 
 
-   constructor(private http: HttpClient)
-   {
-   }
+   constructor(private http: HttpClient) {}
 
-   public isLoggedIn(): boolean
-   {
-      if (localStorage.getItem('isAuthenticated') === 'true')
-      {
-         return true;
-      }
-
-      return false;
+   public isLoggedIn(): boolean {
+      return localStorage.getItem('isAuthenticated') === 'true';
    }
 
 
@@ -38,14 +30,12 @@ export class AuthService {
     *
     * @returns {Observable<boolean>}
     */
-   login(email:string, password:string ): Observable<boolean>
-   {
+   login(email: string, password: string ): Observable<boolean> {
       // TODO: Shall we realy return a boolean observable as we set the isLoggedIn member ?
-      var observable: Observable<boolean> = Observable.create( observer =>
-      {
+      const observable: Observable<boolean> = Observable.create( observer => {
          this.http.post(
             environment.apiEndPoints.sessionService,
-            { "email": email, "password": password }
+            { 'email': email, 'password': password }
          ).subscribe(
             () => { localStorage.setItem('isAuthenticated','true') ; observer.next(true); observer.complete(); },
             () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(false); observer.complete();}
@@ -60,15 +50,18 @@ export class AuthService {
     *
     * @returns void
     */
-   logout(): Observable<void>
-   {
-      // TODO: Shall we realy return a boolean observable as we set the isLoggedIn member ?
-      var observable: Observable<void> = Observable.create(observer => {
+   logout(): Observable<void> {
+      // TODO: Shall we really return a boolean observable as we set the isLoggedIn member ?
+      const observable: Observable<void> = Observable.create(observer => {
          this.http.delete(
             environment.apiEndPoints.sessionService
          ).subscribe(
-            () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(); observer.complete(); },
-            () => { localStorage.setItem('isAuthenticated', 'false'); observer.next(); observer.complete(); } // TODO what do we do in case of error ? : )
+            () => {
+               localStorage.setItem('isAuthenticated', 'false');
+               observer.next(); observer.complete(); },
+            () => {
+               localStorage.setItem('isAuthenticated', 'false');
+               observer.next(); observer.complete(); } // TODO what do we do in case of error ? : )
          );
       });
 

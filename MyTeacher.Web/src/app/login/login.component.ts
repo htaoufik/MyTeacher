@@ -25,7 +25,12 @@ export class LoginComponent {
      */
     loginForm: FormGroup;
 
-    // inputAddOnInstance = InputAddOnService.getInstance();
+    /**
+     * Form submission status
+     *
+     * @type boolean
+     */
+    submitted: boolean;
 
     /**
      * Constructor injects the Auth Service and the router
@@ -75,8 +80,7 @@ export class LoginComponent {
     login(): void {
         this.message = 'Trying to log in ...';
 
-        this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(() =>
-        {
+        this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(() => {
             this.setMessage();
             const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/teacher/home';
             this.router.navigate([redirect]);       

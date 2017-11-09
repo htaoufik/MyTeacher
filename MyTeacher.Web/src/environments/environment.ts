@@ -7,6 +7,7 @@ export const environment = {
    production: false,
    apiEndPoints:
    {
-      sessionService: "/rest/sessions"   
+       sessionService: '/rest/sessions',
+       registrationService: '/rest/teacher-accounts'
    }
 };
