@@ -3,6 +3,7 @@ import {
     HttpClient, HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest,
     HttpResponse
 } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { Teacher } from '../data-model/teacher';
@@ -53,7 +54,12 @@ export class RegistrationFormComponent {
      * @param {InputAddOnService} addOnService
      * @param {HttpClient} http
      */
-    constructor(private fb: FormBuilder, public addOnService: InputAddOnService, private http: HttpClient) {
+    constructor(
+        private fb: FormBuilder,
+        public addOnService: InputAddOnService,
+        private http: HttpClient,
+        public router: Router
+        ) {
         this.createForm();
     }
 
@@ -88,8 +94,7 @@ export class RegistrationFormComponent {
             }
         ).subscribe(
             data => {
-                this.message = 'Your account has been created';
-                },
+                this.router.navigate(['/login']);                },
             (error: HttpErrorResponse) => {
                 if (error.error instanceof Error) {
                     this.message = error.error.message;
