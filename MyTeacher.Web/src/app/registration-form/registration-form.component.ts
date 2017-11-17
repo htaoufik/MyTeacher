@@ -5,11 +5,11 @@ import {
 } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import { Teacher } from '../data-model/teacher';
+
 import { InputAddOnService } from '../../services/input-add-on.service';
 import { environment } from '../../environments/environment';
 import { PasswordValidation } from '../../services/validators/password-validation';
+import { AuthService } from '../../services/security/auth.service';
 
 
 @Component({
@@ -26,13 +26,6 @@ export class RegistrationFormComponent {
      * @type {string}
      */
     message: string;
-
-    /**
-     * Status sent by registration service once the request is submitted
-     *
-     * @type boolean
-     */
-    registrationStatus: Observable<boolean>;
 
     /**
      * The registration form
@@ -55,6 +48,7 @@ export class RegistrationFormComponent {
      * @param {InputAddOnService} addOnService
      * @param {HttpClient} http
      * @param {Router} router
+     * @param {AuthService} authService
      *
      * @return void
      */
@@ -62,7 +56,8 @@ export class RegistrationFormComponent {
         private fb: FormBuilder,
         public addOnService: InputAddOnService,
         private http: HttpClient,
-        public router: Router
+        public router: Router,
+        public authService: AuthService
         ) {
         this.createForm();
     }
@@ -86,6 +81,7 @@ export class RegistrationFormComponent {
 
     /**
      * Sends the Http request to register the current user
+     * and logs him in automatically if the registration is successful
      *
      * @return void
      */
@@ -101,7 +97,11 @@ export class RegistrationFormComponent {
             }
         ).subscribe(
             data => {
-                this.router.navigate(['/login']);                },
+                this.authService.login(this.registrationForm.value.email, this.registrationForm.value.password).subscribe(() => {
+                    const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/teacher/home';
+                    this.router.navigate([redirect]);
+                });
+            },
             (error: HttpErrorResponse) => {
                 if (error.error instanceof Error) {
                     this.message = error.error.message;

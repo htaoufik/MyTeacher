@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { FileService } from '../../services/file.service';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../../services/security/auth.service';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Component({
