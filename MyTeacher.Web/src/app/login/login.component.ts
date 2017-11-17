@@ -7,7 +7,12 @@ import { InputAddOnService } from '../../services/input-add-on.service';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss', '../app.component.scss', '../../sass/form.scss']
+    styleUrls: [
+        './login.component.scss',
+        '../app.component.scss',
+        '../../sass/form.scss',
+        '../../sass/security.scss'
+    ]
 })
 export class LoginComponent {
 

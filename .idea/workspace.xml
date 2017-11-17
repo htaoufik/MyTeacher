@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d4f6340-3080-465d-8bc7-27916dfaf72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/sass/security.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.css" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/sass/form.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/sass/form.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.userprefs" afterPath="$PROJECT_DIR$/MyTeacher.userprefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,7 +21,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="security.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/sass/security.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -43,11 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/login/login.component.spec.ts" />
-        <option value="$PROJECT_DIR$/src/app/registration/registration.component.spec.ts" />
-        <option value="$PROJECT_DIR$/src/services/file.service.spec.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/app/registration/registration.component.html" />
         <option value="$PROJECT_DIR$/src/sass/styles.scss" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/registration-form/registration-form.component.spec.ts" />
@@ -90,10 +129,15 @@
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/student-list/student-list.component.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/my-agenda/my-agenda.component.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/auth.service.ts" />
-        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.html" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/environments/environment.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.ts" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/sass/security.scss" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.html" />
       </list>
     </option>
   </component>
@@ -336,6 +380,13 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="environments" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="MyTeacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyTeacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="MyTeacher.Web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -356,6 +407,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/MyTeacher.Web/node_modules/tslint" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -432,12 +484,12 @@
       <workItem from="1508875050806" duration="2635000" />
       <workItem from="1510151455109" duration="10236000" />
       <workItem from="1510308055965" duration="90000" />
-      <workItem from="1510916547545" duration="105000" />
+      <workItem from="1510916547545" duration="3943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148113000" />
+    <option name="totallyTimeSpent" value="151951000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,9 +502,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34006462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34006462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -467,7 +521,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -508,10 +561,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/images/profile-picture/thumbs/1.png" />
-    <entry file="file://$PROJECT_DIR$/src/sass/_mixins.scss" />
-    <entry file="file://$PROJECT_DIR$/src/sass/_variables.scss" />
-    <entry file="file://$PROJECT_DIR$/src/app/registration-form/registration-form.component.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/registration-form/registration-form.component.scss" />
     <entry file="file://$PROJECT_DIR$/src/app/home-teacher/home-teacher.component.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/data-model/time-slot.ts" />
@@ -682,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/services/input-add-on.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -724,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -738,10 +773,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/sass/security.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="368">
+          <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

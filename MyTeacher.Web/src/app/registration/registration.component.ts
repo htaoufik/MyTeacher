@@ -4,7 +4,11 @@ import { slideInDownAnimation } from '../animations';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css', '../app.component.scss'],
+  styleUrls: [
+      './registration.component.scss',
+      '../app.component.scss',
+      '../../sass/security.scss'
+  ],
   animations: [ slideInDownAnimation ]
 })
 
