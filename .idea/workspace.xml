@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d4f6340-3080-465d-8bc7-27916dfaf72d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.Web/src/sass/form.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/sass/form.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTeacher.userprefs" afterPath="$PROJECT_DIR$/MyTeacher.userprefs" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
@@ -270,18 +272,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MyTeacher" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyTeacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="MyTeacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyTeacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="MyTeacher.Services" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="MyTeacher" type="b2602c69:ProjectViewProjectNode" />
@@ -344,6 +340,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -435,11 +432,12 @@
       <workItem from="1508875050806" duration="2635000" />
       <workItem from="1510151455109" duration="10236000" />
       <workItem from="1510308055965" duration="90000" />
+      <workItem from="1510916547545" duration="105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148008000" />
+    <option name="totallyTimeSpent" value="148113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,7 +452,7 @@
     <frame x="0" y="23" width="1280" height="713" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33441034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34006462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -681,9 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

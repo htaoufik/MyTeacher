@@ -22,7 +22,7 @@
                   <label class="center-block" for="password">Password</label>
                </span>
                <div class="input-group-addon" [ngClass]="addOnService.getAddOnClass(this.loginForm, 'password')">
-                  <i class="fa fa-key" aria-hidden="true"></i>
+                  <i class="fa fa-lock" aria-hidden="true"></i>
                </div>
             </div>
             <div class="alert alert-danger" *ngIf="addOnService.showError(this.loginForm, 'password', 'required')">Your password is required</div>
