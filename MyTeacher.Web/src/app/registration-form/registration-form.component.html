@@ -46,8 +46,18 @@
                 </div>
                 <div class="alert alert-danger" *ngIf="this.addOnService.showError(this.registrationForm, 'password', 'required')">Your password is required</div>
                 <div class="alert alert-danger" *ngIf="this.addOnService.showError(this.registrationForm, 'password', 'minlength')">Your password should be 8 characters minimum</div>
+                <div class="form-group input-group">
+                <span class="has-float-label">
+                  <input class="form-control" type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm your password">
+                  <label class="center-block" for="password">Confirm your password</label>
+                </span>
+                    <div class="input-group-addon" [ngClass]="this.addOnService.getAddOnClass(this.registrationForm, 'confirmPassword')">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="alert alert-danger" *ngIf="this.addOnService.showError(this.registrationForm, 'confirmPassword', 'MatchPassword')">Your passwords do not match</div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" (click)="register()" [disabled]="!registrationForm.valid" type="submit">Play</button>
+                    <button class="btn btn-primary btn-block" (click)="register()" [disabled]="!registrationForm.valid" type="submit">Register</button>
                 </div>
             </form>
         </div>

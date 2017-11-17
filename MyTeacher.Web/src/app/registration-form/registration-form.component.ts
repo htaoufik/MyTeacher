@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Observable';
 import { Teacher } from '../data-model/teacher';
 import { InputAddOnService } from '../../services/input-add-on.service';
 import { environment } from '../../environments/environment';
+import { PasswordValidation } from '../../services/validators/password-validation';
 
 
 @Component({
@@ -53,6 +54,9 @@ export class RegistrationFormComponent {
      * @param {FormBuilder} fb
      * @param {InputAddOnService} addOnService
      * @param {HttpClient} http
+     * @param {Router} router
+     *
+     * @return void
      */
     constructor(
         private fb: FormBuilder,
@@ -74,6 +78,9 @@ export class RegistrationFormComponent {
             lastName: ['', [Validators.required, Validators.minLength(2)]],
             email: ['', [Validators.required, Validators.email] ],
             password: ['', [Validators.required, Validators.minLength(8)] ],
+            confirmPassword: ['', [Validators.required, Validators.minLength(8)] ]
+        }, {
+            validator: PasswordValidation.MatchPassword
         });
     }
 
@@ -103,6 +110,5 @@ export class RegistrationFormComponent {
                 }
             }
         );
-
     }
 }
