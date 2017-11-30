@@ -2,7 +2,7 @@
    <div class="security-title"><img src="assets/images/logo.png"></div>
    <div class="security-form align-items-center align-self-center col-4 rounded-top">
       <!--<div class="alert alert-info">{{message}}</div>-->
-      <div>
+      <div class="container-fluid">
          <form [formGroup]="loginForm" novalidate autocomplete="off" (ngSubmit)="login()">
             <div class="form-group input-group">
                <span class="has-float-label">
@@ -28,7 +28,7 @@
             <div class="alert alert-danger" *ngIf="addOnService.showError(this.loginForm, 'password', 'minlength')">Your password should be 8 characters minimum</div>
          </form>
          <p>
-            <button (click)="login()" class="btn btn-primary btn-block small">Login</button>
+            <button (click)="login()" [disabled]="!loginForm.valid"  class="btn btn-primary btn-block small">Login</button>
          </p>
       </div>
    </div>
