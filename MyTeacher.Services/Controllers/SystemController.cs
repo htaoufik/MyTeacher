@@ -12,7 +12,6 @@ namespace MyTeacher.Services.Controllers
       [HttpGet]
       public string hello()
       {
-         MyTeacherError.WrongCredentials.Throw();
          return "Hello friend";
       }
 

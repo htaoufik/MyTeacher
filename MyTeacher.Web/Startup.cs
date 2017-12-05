@@ -1,5 +1,6 @@
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyTeacher.Models;
+using MyTeacher.Services.Business;
 using MyTeacher.Services.Models;
 using MyTeacher.Services.Utils.Services;
 using Newtonsoft.Json;
@@ -37,6 +39,7 @@ namespace MyTeacher.Web
          services.Configure<MongoOptions>(section);
          services.AddScoped<UnitOfWork>();
          services.AddScoped<MongoContext>();
+         services.AddScoped<InvitationManager>();
 
 
          // Configure the authentication and cookie service
@@ -45,7 +48,11 @@ namespace MyTeacher.Web
          services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
-               options.LoginPath = "/rest/system";
+               options.Events.OnRedirectToLogin = context =>
+               {
+                  context.Response.StatusCode = (int) HttpStatusCode.Forbidden;
+                  return Task.CompletedTask;
+               };
             });
       }
 

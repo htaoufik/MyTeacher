@@ -14,6 +14,7 @@ namespace MyTeacher.Models
       Task<DeleteResult> RemoveAsync(string id);
       Task<ReplaceOneResult> ReplaceAsync(string id, T item);
       Task<IAsyncCursor<T>> FindAsync(Expression<Func<T, bool>> filter);
+      Task<ReplaceOneResult> UpdateAsync(T item);
 
       // should be used with high cautious, only in relation with demo setup
       Task<DeleteResult> RemoveAllAsync();
