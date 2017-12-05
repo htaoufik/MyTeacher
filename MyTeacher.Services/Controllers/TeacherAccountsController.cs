@@ -7,6 +7,7 @@ using MongoDB.Driver;
 using MyTeacher.Models;
 using MyTeacher.Services.Dto;
 using MyTeacher.Services.Models;
+using MyTeacher.Services.Utils.Services;
 using MyTeacher.Utils.Services;
 
 namespace MyTeacher.Services.Controllers
@@ -32,8 +33,7 @@ namespace MyTeacher.Services.Controllers
          // Check if the user already exist
          if ((await _userRepository.FindAsync(u => u.Email == accountCreationRequest.Email)).Any())
          {
-            // TODO: add an generic error handler somewhere !
-            return BadRequest(new {description = "User already exist", code = "MT-002"});
+            MyTeacherError.UserAlreadyExist.Throw();
          }
 
          // Lets create the user

@@ -1,5 +1,8 @@
+using System;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.KeyVault.Models;
+using MyTeacher.Services.Utils.Services;
 
 namespace MyTeacher.Services.Controllers
 {
@@ -9,6 +12,7 @@ namespace MyTeacher.Services.Controllers
       [HttpGet]
       public string hello()
       {
+         MyTeacherError.WrongCredentials.Throw();
          return "Hello friend";
       }
 

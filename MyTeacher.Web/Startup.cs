@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyTeacher.Models;
 using MyTeacher.Services.Models;
+using MyTeacher.Services.Utils.Services;
 using Newtonsoft.Json;
 
 namespace MyTeacher.Web
@@ -73,25 +74,7 @@ namespace MyTeacher.Web
 
          // Adds an exception handler to return json error object on uncatched exceptions
          // Check this link for an interesting article: https://blog.kloud.com.au/2016/03/23/aspnet-core-tips-and-tricks-global-exception-handling/
-         app.UseExceptionHandler(
-            builder =>
-            {
-               const string defaultCode = "MT-001";
-               builder.Run(
-                  async context =>
-                  {
-                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                     context.Response.ContentType = "application/json";
-
-                     var error = context.Features.Get<IExceptionHandlerFeature>();
-                     if (error != null)
-                     {
-                        await context.Response.WriteAsync( 
-                           JsonConvert.SerializeObject(new { description = error.Error.Message, code = defaultCode })
-                        ).ConfigureAwait(false);
-                     }
-                  });
-            });
+         app.UseExceptionHandler( ErrorHandler.AddExceptionHandler );
 
 
          app.UseDefaultFiles(); // For index.html

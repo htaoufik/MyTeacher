@@ -11,6 +11,7 @@ using MongoDB.Driver;
 using MyTeacher.Models;
 using MyTeacher.Services.Dto;
 using MyTeacher.Services.Models;
+using MyTeacher.Services.Utils.Services;
 
 namespace MyTeacher.Services.Controllers
 {
@@ -48,7 +49,7 @@ namespace MyTeacher.Services.Controllers
 
          if (foundUser == null)
          {
-            return Unauthorized();
+            MyTeacherError.WrongCredentials.Throw();
          }
 
          // First version, we create claims from the email address !
