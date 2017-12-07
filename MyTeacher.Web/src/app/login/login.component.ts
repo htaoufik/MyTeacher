@@ -74,7 +74,7 @@ export class LoginComponent {
      * @return void
      */
     setMessage() {
-        this.message = 'Logged ' + (this.authService.isLoggedIn() ? 'in' : 'out');
+        this.message = 'Logged ' + (AuthService.isLoggedIn ? 'in' : 'out');
     }
 
     /**

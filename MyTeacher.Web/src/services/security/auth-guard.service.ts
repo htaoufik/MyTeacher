@@ -32,7 +32,7 @@ export class AuthGuard implements CanActivate {
      */
     checkLogin(url: string): boolean {
 
-        if (this.authService.isLoggedIn()) {
+        if (AuthService.isLoggedIn) {
             return true;
         }
 

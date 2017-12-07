@@ -5,15 +5,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-
-
-
 #header {
   height:84px;
   background-color: $mainGrey;
+  .header-row{
+    height: 84px;
+  }
   .logo {
-    line-height: 84px;
-    margin-top: 13px;
+    margin-left: 20px;
+  }
+  .nav {
+    .nav-item {
+      margin-right: 50px;
+      .nav-link {
+        @include open-sans(500);
+        color: white;
+        &:hover {
+          color: $mainOrange;
+          border-bottom: 2px solid $mainOrange;
+          border-radius: 0;
+        }
+      }
+    }
   }
 }
 

@@ -17,12 +17,12 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import { AppRoutingModule } from './app-routing.module';
-import {InputAddOnService} from '../services/input-add-on.service';
+import { InputAddOnService } from '../services/input-add-on.service';
 import { StudentListComponent } from './student-list/student-list.component';
 import { MyAgendaComponent } from './my-agenda/my-agenda.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { TeacherAppLayoutComponent } from './teacher-app-layout/teacher-app-layout.component';
-import { AppHeader } from './components/app-header/app-header.component';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 
 @NgModule({
@@ -47,7 +47,7 @@ import { AppHeader } from './components/app-header/app-header.component';
       MyAgendaComponent,
       StudentDetailsComponent,
       TeacherAppLayoutComponent,
-      AppHeader
+      AppHeaderComponent
    ],
    providers: [
       FileService,

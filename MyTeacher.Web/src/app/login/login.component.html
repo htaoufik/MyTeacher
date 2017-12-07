@@ -26,10 +26,10 @@
             </div>
             <div class="alert alert-danger" *ngIf="addOnService.showError(this.loginForm, 'password', 'required')">Your password is required</div>
             <div class="alert alert-danger" *ngIf="addOnService.showError(this.loginForm, 'password', 'minlength')">Your password should be 8 characters minimum</div>
+            <p>
+               <button (click)="login()" class="btn btn-primary btn-block small" type="submit">Login</button>
+            </p>
          </form>
-         <p>
-            <button (click)="login()" class="btn btn-primary btn-block small">Login</button>
-         </p>
       </div>
    </div>
    <div class="security-footer align-items-center align-self-center col-4 rounded-bottom">

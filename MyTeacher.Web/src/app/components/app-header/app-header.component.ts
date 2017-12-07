@@ -7,21 +7,25 @@ import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from
    templateUrl: './app-header.component.html',
    styleUrls: ['../../app.component.scss']
 })
-export class AppHeader  {
+export class AppHeaderComponent  {
+    /**
+     * User authentication status
+     */
+    isConnected: boolean;
 
-   constructor(
-      public authService: AuthService,
-      private router: Router
-   ) 
-   {
-   }
+    constructor(
+        public authService: AuthService,
+        private router: Router
+    ) {
+        this.isConnected = AuthService.isLoggedIn();
+    }
 
-   /**
-   * Disconnects the user
-   *
-   * @return void
-   */
-   logout(): void {
-      this.authService.logout().subscribe(() => { this.router.navigate(['/login']); });
-   }
+    /**
+    * Disconnects the user
+    *
+    * @return void
+    */
+    logout(): void {
+        this.authService.logout().subscribe(() => { this.router.navigate(['/login']); });
+    }
 }
