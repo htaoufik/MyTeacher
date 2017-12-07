@@ -8,6 +8,7 @@ namespace MyTeacher.Services.Models
    {
       public IMongoRepository<TeacherAccount> TeacherAccounts { get; set; }
       public IMongoRepository<User> Users { get; set; }
+      public IMongoRepository<Invitation> Invitations { get; set; }
 
 
       private readonly MongoContext _context;
@@ -19,6 +20,7 @@ namespace MyTeacher.Services.Models
          // Initialises the repositories
          TeacherAccounts = new MongoRepository<TeacherAccount>(_context, "TeacherAccounts");
          Users = new MongoRepository<User>(_context, "Users");
+         Invitations = new MongoRepository<Invitation>(_context, "Invitations");
       }
 
       /// <summary>

@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System.Collections.Generic;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MyTeacher.Models;
 using Newtonsoft.Json;
@@ -16,7 +17,7 @@ namespace MyTeacher.Services.Models
       [BsonElement("name")]
       public string Name { get; set; }
 
-      [BsonElement("Telephone")]
+      [BsonElement("telephone")]
       public string Telephone { get; set; }
 
       [BsonElement("addressLine")]
@@ -31,10 +32,13 @@ namespace MyTeacher.Services.Models
       [BsonElement("countryCode")]
       public string CountryCode { get; set; }
 
-      [JsonIgnore]
       [BsonElement("ownerId")]
       [BsonRepresentation(BsonType.ObjectId)]
       public string OwnerId { get; set; }
+
+      [BsonElement("students")]
+      [BsonRepresentation(BsonType.ObjectId)]
+      public List<string> Students { get; set; }
 
       [JsonIgnore]
       [BsonExtraElements]

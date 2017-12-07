@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d4f6340-3080-465d-8bc7-27916dfaf72d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MyTeacher.Services/Business/InvitationManager.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MyTeacher.Services/Models/Invitation.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MyTeacher.Services/Utils/Services/ErrorHandler.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MyTeacher.Services/Utils/Services/MyTeacherError.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Controllers/SessionsController.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Controllers/SessionsController.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Controllers/SystemController.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Controllers/SystemController.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Controllers/TeacherAccountsController.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Controllers/TeacherAccountsController.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Models/TeacherAccount.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Models/TeacherAccount.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Models/UnitOfWork.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Models/UnitOfWork.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Utils/DataAccess/IMongoRepository.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Utils/DataAccess/IMongoRepository.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Services/Utils/DataAccess/MongoRepository.cs" afterPath="$PROJECT_DIR$/MyTeacher.Services/Utils/DataAccess/MongoRepository.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/Startup.cs" afterPath="$PROJECT_DIR$/MyTeacher.Web/Startup.cs" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/app-routing.module.ts" />
       <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" />
-      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.module.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/app.module.ts" />
       <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html" />
-      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.ts" />
       <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
-      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" />
       <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.html" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.html" />
-      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/services/security/auth-guard.service.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/services/security/auth-guard.service.ts" />
-      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/services/security/auth.service.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/services/security/auth.service.ts" />
+      <change beforePath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts" afterPath="$PROJECT_DIR$/MyTeacher.Web/src/app/registration/registration.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,33 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app-header.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.ts">
+      <file leaf-file-name="login.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app-header.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,9 +115,9 @@
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/services/security/auth-guard.service.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/registration-form/registration-form.component.html" />
-        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html" />
         <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss" />
+        <option value="$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html" />
       </list>
     </option>
   </component>
@@ -458,23 +444,8 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing" SSL_PROTOCOLS="sslv3">
     <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -504,12 +475,12 @@
       <workItem from="1510151455109" duration="10236000" />
       <workItem from="1510308055965" duration="90000" />
       <workItem from="1510916547545" duration="13932000" />
-      <workItem from="1512657434027" duration="20000" />
+      <workItem from="1512657434027" duration="225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161960000" />
+    <option name="totallyTimeSpent" value="162165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,17 +493,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3457189" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27226892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3457189" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -540,7 +512,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -842,23 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/sass/security.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -873,18 +827,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/app.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="215">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.html">
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/components/app-header/app-header.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTeacher.Web/src/app/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

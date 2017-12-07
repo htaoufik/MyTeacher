@@ -54,6 +54,11 @@ namespace MyTeacher.Models
          return await _collection.ReplaceOneAsync(doc => doc.Id == id, item);
       }
 
+      public async Task<ReplaceOneResult> UpdateAsync( T item)
+      {
+         return await _collection.ReplaceOneAsync(doc => doc.Id == item.Id, item);
+      }
+
       public async Task<IAsyncCursor<T>> FindAsync(Expression<Func<T, bool>> filter)
       {
          return await _collection.FindAsync<T>(filter);

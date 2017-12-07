@@ -1,5 +1,6 @@
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -8,7 +9,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyTeacher.Models;
+using MyTeacher.Services.Business;
 using MyTeacher.Services.Models;
+using MyTeacher.Services.Utils.Services;
 using Newtonsoft.Json;
 
 namespace MyTeacher.Web
@@ -36,6 +39,7 @@ namespace MyTeacher.Web
          services.Configure<MongoOptions>(section);
          services.AddScoped<UnitOfWork>();
          services.AddScoped<MongoContext>();
+         services.AddScoped<InvitationManager>();
 
 
          // Configure the authentication and cookie service
@@ -44,7 +48,11 @@ namespace MyTeacher.Web
          services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
-               options.LoginPath = "/rest/system";
+               options.Events.OnRedirectToLogin = context =>
+               {
+                  context.Response.StatusCode = (int) HttpStatusCode.Forbidden;
+                  return Task.CompletedTask;
+               };
             });
       }
 
@@ -73,25 +81,7 @@ namespace MyTeacher.Web
 
          // Adds an exception handler to return json error object on uncatched exceptions
          // Check this link for an interesting article: https://blog.kloud.com.au/2016/03/23/aspnet-core-tips-and-tricks-global-exception-handling/
-         app.UseExceptionHandler(
-            builder =>
-            {
-               const string defaultCode = "MT-001";
-               builder.Run(
-                  async context =>
-                  {
-                     context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                     context.Response.ContentType = "application/json";
-
-                     var error = context.Features.Get<IExceptionHandlerFeature>();
-                     if (error != null)
-                     {
-                        await context.Response.WriteAsync( 
-                           JsonConvert.SerializeObject(new { description = error.Error.Message, code = defaultCode })
-                        ).ConfigureAwait(false);
-                     }
-                  });
-            });
+         app.UseExceptionHandler( ErrorHandler.AddExceptionHandler );
 
 
          app.UseDefaultFiles(); // For index.html

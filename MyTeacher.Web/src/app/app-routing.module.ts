@@ -25,6 +25,7 @@ const routes: Routes = [
       path: '',
       component: AppComponent, 
       children: [
+         { path: '', canActivate: [AuthGuard], redirectTo: '/teacher/home', pathMatch: 'full' },
          { path: '', redirectTo: '/login', pathMatch: 'full' },
          { path: 'registration', component: RegistrationComponent },
          { path: 'login', component: LoginComponent }
