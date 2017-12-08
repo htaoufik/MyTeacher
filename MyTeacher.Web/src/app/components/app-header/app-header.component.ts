@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/security/auth.service';
-import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 
 @Component({
    selector: 'app-header',

@@ -1,28 +1,20 @@
 ﻿<header class="container-fluid" id="header">
    <div class="row align-items-center header-row">
-<!--      <div class="col-1">
-         <a href="#menuCollapse" class="toggle-menu btn" data-toggle="collapse" aria-expanded="true" aria-controls="menuCollapse">
-            <i class="fa fa-bars"></i>
-         </a>
-      </div>-->
       <div class="col-3">
          <img src="assets/images/logo.png" class="logo">
       </div>
       <div class="col-5">
          <ul class="nav nav-pills">
             <li class="nav-item">
-               <a routerLink="/registration" class="nav-link">Registration</a>
+               <a routerLink="/teacher/home" class="nav-link" routerLinkActive="active">My agenda</a>
             </li>
             <li class="nav-item">
-               <a (click)="logout()" class="nav-link" >Logout</a>
-            </li>
-            <li class="nav-item">
-               <a routerLink="/teacher/home" class="nav-link">Home</a>
+               <a routerLink="/teacher/students" class="nav-link" routerLinkActive="active">My students</a>
             </li>
          </ul>
       </div>
-      <div class="col-4">
-         <p *ngIf="isConnected">Welcome Trucnuche!</p>
+      <div class="col-4 text-right">
+         <p class="user-name" *ngIf="isConnected">Welcome Sébastien <a (click)="logout()"><i class="fa fa-power-off" aria-hidden="true"></i></a></p>
       </div>
    </div>
 </header>

@@ -8,7 +8,7 @@
 #header {
   height:84px;
   background-color: $mainGrey;
-  .header-row{
+  .header-row {
     height: 84px;
   }
   .logo {
@@ -17,10 +17,18 @@
   .nav {
     .nav-item {
       margin-right: 50px;
+      height: 84px;
+      line-height: 66px;
       .nav-link {
-        @include open-sans(500);
+        @include open-sans(300);
         color: white;
         &:hover {
+          color: $mainOrange;
+          border-bottom: 2px solid $mainOrange;
+          border-radius: 0;
+        }
+        &.active {
+          background-color: transparent;
           color: $mainOrange;
           border-bottom: 2px solid $mainOrange;
           border-radius: 0;
@@ -28,7 +36,23 @@
       }
     }
   }
+  .user-name {
+    color:$mainOrange;
+    @include open-sans(100);
+    font-size: 12px;
+    margin-top: 20px;
+    margin-right: 20px;
+    .fa {
+      font-size: 16px;
+      margin-left: 15px;
+    }
+  }
 }
+
+.main-stage {
+  padding: 0 80px;
+}
+
 
 h1 {
   font-family: $gloria;
@@ -56,6 +80,7 @@ h3 {
 
 a {
     color: $mainOrange;
+    cursor: pointer;
 }
 
 p {
@@ -98,8 +123,11 @@ p {
   margin-top: 12px;
 }
 
-.nav-item
-{
+.nav-item {
    color: $mainOrange;
    cursor: pointer;
+}
+
+.action-bar {
+  margin-bottom: 20px;
 }

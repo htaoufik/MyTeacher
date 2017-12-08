@@ -1,10 +1,6 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-.main-stage {
-  padding: 0 80px;
-}
-
 
 .period-switcher {
   border-radius: 4px;
@@ -27,13 +23,6 @@
       color: white;
     }
   }
-}
-
-.btn-primary.small {
-  height: 38px;
-  font-size: 14px;
-  padding: 9px 64px;
-  margin: 0;
 }
 
 .time-block {

@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import {StudentDetailsComponent} from './student-details/student-details.component';
+import {StudentListComponent} from './student-list/student-list.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       children: [
          { path: '', redirectTo: 'home', pathMatch: 'full' },
          { path: 'home', component: HomeTeacherComponent },
+         { path: 'students', component: StudentListComponent },
          { path: 'student-details/:id', component: StudentDetailsComponent }
       ]
    },

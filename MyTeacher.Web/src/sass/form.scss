@@ -84,12 +84,18 @@ input.ng-invalid.ng-dirty {
 
 .btn-primary, .btn-primary.disabled, .btn-primary:disabled {
   background-color: $mainOrange;
+  color: white;
   border: none;
   font-family: $gloria;
   font-size: 23px;
   margin: 40px 0;
   padding: 20px;
-  padding: 10px 0 13px 0;
+  &.small {
+    height: 38px;
+    font-size: 14px;
+    padding: 9px 64px;
+    margin: 0;
+  }
   &:hover {
     background-color: $mainGrey;
   }
