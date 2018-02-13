@@ -14,10 +14,7 @@ namespace MyTeacher.Models
       public MongoContext(IOptions<MongoOptions> settings)
       {
          var client = new MongoClient(settings.Value.ConnectionString);
-         if (client != null)
-         {
-            Database = client.GetDatabase(settings.Value.Database);
-         }
+         Database = client.GetDatabase(settings.Value.Database);
       }
    }
 }

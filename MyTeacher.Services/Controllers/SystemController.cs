@@ -21,6 +21,5 @@ namespace MyTeacher.Services.Controllers
       {
          return "Hello limited friend";
       }
-
    }
 }
